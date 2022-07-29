@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+      }
+      .box {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 5px;
+      }
+      .text {
+        color: white;
+      }
+      .blue {
+        background-color: blue;
+        height: 10vh;
+        flex-basis: 100%;
+      }
+      .orange {
+        background-color: orange;
+        height: 20vh;
+        flex-basis: 100%;
+      }
+      .green {
+        background-color: green;
+        height: 10vh;
+        flex-basis: 100%;
+      }
+      .red {
+        background-color: red;
+        height: 10vh;
+        flex-basis: 100%;
+      }
+      .hidden {
+        display: none;
+      }
+      @media all and (min-width: 500px) {
+        .red {
+          flex-basis: calc(50% - 10px);
+        }
+        .hidden {
+          display: flex;
+        }
+      }
+      @media all and (min-width: 800px) {
+        .box {
+          margin: 25px;
+        }
+
+        .blue {
+          flex-basis: calc(50% - 50px);
+        }
+        .orange {
+          height: 30vh;
+        }
+        .green {
+          flex-basis: calc(33.3333% - 50px);
+          height: 20vh;
+        }
+        .red {
+          height: 15vh;
+          flex-basis: calc(25% - 50px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box blue text">blue</div>
+      <div class="box blue text">blue</div>
+      <div class="box orange text">orange</div>
+      <div class="box green text">green</div>
+      <div class="box green text">green</div>
+      <div class="box green text">green</div>
+      <div class="box red text">red</div>
+      <div class="box red text">red</div>
+      <div class="box red hidden text">red</div>
+      <div class="box red hidden text">red</div>
+    </div>
+  </body>
+</html>
